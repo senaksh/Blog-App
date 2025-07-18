@@ -1,0 +1,89 @@
+/* Base Styling */
+body {
+  background: linear-gradient(to bottom right, #dae0e3, #f8bbef, #6bcff9);
+  font-family: 'Segoe UI', sans-serif;
+  color: #080202;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Navigation Bar */
+nav {
+  background: rgba(181, 121, 177, 0.85);
+  padding: 1rem 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+nav a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #80e6de;
+  color: #fff;
+}
+
+/* Main Content Area */
+main {
+  padding: 2rem;
+  width: 90%;
+  max-width: 1000px;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Blog Posts Grid */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Individual Post Card */
+.post {
+  background: rgba(255, 255, 255, 0.6);
+  border: 2px dashed #f8bbef;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 245, 255, 0.1);
+}
+
+.post:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px #00f5ff70;
+  background-color: #ffffffcc;
+}
+
+/* Headings and Text */
+.post h2 {
+  font-size: 1.4rem;
+  color: #b579b1;
+  margin-bottom: 0.5rem;
+}
+
+.post p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

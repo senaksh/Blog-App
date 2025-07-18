@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="max-width: 800px; margin: 4rem auto; padding: 3rem; background: rgba(255,255,255,0.55); border-radius: 2rem; box-shadow: 0 0 25px rgba(0,0,0,0.1);">
+  <h2 style="text-align:center; color:#b579b1; margin-bottom: 3rem;">📝 Create a New Blog Post</h2>
+  
+  <form method="POST">
+    {{ form.hidden_tag() }}
+    
+    <div style="margin-bottom: 2.5rem;">
+      {{ form.title.label }}<br>
+      {{ form.title(class="input", style="width:100%; padding:1.2rem; border-radius:1rem; font-size:1.1rem; margin-top:0.5rem;") }}
+    </div>
+
+    <div style="margin-bottom: 2.5rem;">
+      {{ form.content.label }}<br>
+      {{ form.content(class="input", rows="6", style="width:100%; padding:1.2rem; border-radius:1rem; font-size:1.1rem; margin-top:0.5rem;") }}
+    </div>
+
+    <div style="text-align:center; margin-top: 2rem;">
+      {{ form.submit(class="btn", style="padding:0.9rem 2.5rem; border-radius:2rem; font-weight:bold; font-size:1.1rem;") }}
+    </div>
+  </form>
+</div>
+{% endblock %}
